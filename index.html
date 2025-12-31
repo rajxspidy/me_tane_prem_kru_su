@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Meera ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- <audio autoplay loop>
+  <source src="music/Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+</audio> -->
+
+<audio id="bgMusic" loop>
+  <source src="music/Perfect.mp3" type="audio/mpeg">
+</audio>
+
+<div class="bg-overlay"></div>
+
+<canvas id="particles"></canvas>
+<canvas id="fireworks"></canvas>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+<section class="page active">
+  <div class="card">
+    <h1>Hey Meera Prajapati ❤️</h1>
+    <p class="text">
+      This is not a website.  
+      This is my heart — written with honesty, effort, and love.
+    </p>
+    <p class="text">
+      From <b>Raj Prajapati</b>, who may not be perfect,  
+      but loves you deeply.
+    </p>
+    <button onclick="nextPage()">Begin 💌</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="card">
+    <h2>I’m Sorry 🥺</h2>
+    <p class="text">
+      I’m sorry for the fights, misunderstandings,  
+      and moments I couldn’t express myself properly.
+    </p>
+    <p class="text">
+      Hurting you was never my intention.
+    </p>
+    <button onclick="nextPage()">Next ❤️</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="card">
+    <h2>Thank You 💞</h2>
+    <p class="text">
+      Thank you for choosing me.  
+      Thank you for staying.  
+      Thank you for being my peace.
+    </p>
+    <button onclick="nextPage()">Our Memories 📸</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="card">
+    <h2>Our Memories 📸</h2>
+    <div class="gallery">
+      <img src="images/Snapchat-958584144.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-1936803958.jpg" onclick="openModal(this)">
+      <img src="images/7f207107df401b7891538d8532252f2e.jpg" onclick="openModal(this)"> 
+      <img src="images/Snapchat-1061149482.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-572156303.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-1645937603.jpg" onclick="openModal(this)">
+      <img src="images/file_00000000aab862308842c87bd0bc437b.png" onclick="openModal(this)">
+      <img src="images/file_00000000820861f68099bd92a1cc2687.png" onclick="openModal(this)">
+      <img src="images/Snapchat-106927275.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-1864114181.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-282156384.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-922957740.jpg" onclick="openModal(this)">
+      <img src="images/IMG-20251110-WA0046.jpg" onclick="openModal(this)">
+      <img src="images/IMG-20251124-WA0013.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-1708210444.jpg" onclick="openModal(this)">
+      <img src="images/Snapchat-84214856.jpg" onclick="openModal(this)">
+      <img src="images/IMG-20251114-WA0032.jpg" onclick="openModal(this)">
+      <img src="images/IMG-20251211-WA0074.jpg" onclick="openModal(this)">
+
+    </div>
+    <button onclick="nextPage()">New Year 🎆</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page newyear">
+  <div class="card">
+    <h2>Happy New Year, My Love 🎆</h2>
+    <p class="text">
+      A new year, a fresh start —  
+      and all I wish for is us.
+    </p>
+    <p class="text">
+      More understanding.  
+      More laughter.  
+      More love.
+    </p>
+    <button onclick="nextPage()">One Question 💍</button>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page proposal-page">
+  <div class="card">
+    <h2>One Question 💍</h2>
+
+    <div class="ring">
+      <div class="diamond"></div>
+    </div>
+
+    <p class="text">
+      Meera Prajapati,  
+      will you be my forever?
+    </p>
+
+    <div class="proposal">
+      <button onclick="accept()">YES ❤️</button>
+      <button onclick="moveNo(this)">NO 😜</button>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page final-page">
+  <div class="card">
+    <h2>Forever Us ❤️</h2>
+
+    <img src="images/IMG-20251211-WA0063.jpg" class="together">
+
+    <!-- Animated Love Lines -->
+    <p id="love3000" class="love-line"></p>
+    <p id="loveUniverse" class="love-line universe hidden">
+      I love you in every universe 🌌
+    </p>
+
+    <p class="signature">— Raj Prajapati💖</p>
+  </div>
+</section>
+
+
+</div>
+
+<!-- IMAGE MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* ======================
+   GLOBAL RESET
+====================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* ======================
+   BACKGROUND
+====================== */
+body{
+    min-height:100vh;
+    background:url("images/c25f204ad09e2cbe53ef4c1aa38a2d76.jpg") center/cover no-repeat fixed;
+    color:white;
+    overflow:hidden;
+}
+
+/* Dark overlay for contrast */
+.bg-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+    z-index:-3;
+}
+
+/* ======================
+   PARTICLES / FIREWORKS
+====================== */
+#particles,
+#fireworks{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+}
+
+/* ======================
+   CONTAINER
+====================== */
+.container{
+    max-width:540px;
+    margin:auto;
+    padding:24px;
+    text-align:center;
+}
+
+/* ======================
+   PAGE SYSTEM
+====================== */
+.page{
+    display:none;
+    animation:fadeUp 1s ease;
+}
+.page.active{
+    display:block;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(25px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* ======================
+   GLASSMORPHISM CARD
+====================== */
+.card{
+    position:relative;
+
+    max-width:420px;
+    margin:40px auto;
+    padding:32px 26px;
+    border-radius:28px;
+
+    /* Glass look */
+    background:rgba(255,255,255,0.22);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.35),
+        inset 0 0 25px rgba(255,255,255,0.2);
+
+    animation:glassFade 0.9s ease;
+}
+
+/* Glass shine */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:28px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0.08),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+@keyframes glassFade{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(0.96);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* ======================
+   TEXT STYLING (FIXED)
+====================== */
+.card h1,
+.card h2{
+    color:#db1c75;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.card p{
+    color:rgba(255,255,255,0.95);
+    font-size:1.1rem;
+    line-height:1.8;
+    margin:18px 0;
+}
+
+.card b{
+    color:#ffffff;
+}
+
+/* ======================
+   BUTTON
+====================== */
+button{
+    padding:14px 28px;
+    border-radius:30px;
+    border:none;
+
+    background:linear-gradient(135deg,#ff4f7b,#ff7aa2);
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:20px;
+
+    box-shadow:0 10px 25px rgba(255,79,123,0.5);
+    transition:0.3s ease;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* ======================
+   GALLERY
+====================== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ======================
+   RING (PROPOSAL)
+====================== */
+.ring{
+    width:120px;
+    height:120px;
+    border:6px solid gold;
+    border-radius:50%;
+    margin:18px auto;
+    position:relative;
+    animation:pulse 2s infinite;
+}
+
+.diamond{
+    width:30px;
+    height:30px;
+    background:linear-gradient(45deg,#fff,#bdf);
+    position:absolute;
+    top:-20px;
+    left:50%;
+    transform:translateX(-50%) rotate(45deg);
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.1);}
+}
+
+/* ======================
+   FINAL PAGE
+====================== */
+.together{
+    width:100%;
+    border-radius:20px;
+    margin:16px 0;
+}
+
+.final-text{
+    font-size:1.2rem;
+    line-height:1.9;
+    color:#ffe6a7;
+}
+
+/* ======================
+   MODAL
+====================== */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal img{
+    max-width:90%;
+    border-radius:15px;
+}
+
+/* ======================
+   MOBILE OPTIMIZATION
+====================== */
+@media(max-width:600px){
+    .card{
+        margin:20px;
+        padding:26px 22px;
+    }
+    button{
+        width:100%;
+        font-size:1.1rem;
+    }
+}
+
+/* ======================
+   FINAL LOVE ANIMATIONS
+====================== */
+
+.love-line{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffe6a7;
+    margin-top: 18px;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(255,200,150,0.6);
+}
+
+/* Glow pulse for "3000" */
+.love-line span{
+    animation: glowPulse 1.8s infinite;
+}
+
+@keyframes glowPulse{
+    0%{ text-shadow: 0 0 8px rgba(255,200,150,0.5); }
+    50%{ text-shadow: 0 0 18px rgba(255,200,150,0.9); }
+    100%{ text-shadow: 0 0 8px rgba(255,200,150,0.5); }
+}
+
+/* Universe line floating */
+.universe{
+    animation: floatUp 3s ease-in-out infinite;
+    opacity: 0.95;
+}
+
+@keyframes floatUp{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-6px); }
+    100%{ transform: translateY(0); }
+}
+
+/* Signature */
+.signature{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+}
+
+/* Utility */
+.hidden{
+    display: none;
+}
