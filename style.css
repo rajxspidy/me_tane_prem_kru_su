@@ -301,3 +301,48 @@ button:hover{
 .hidden{
     display: none;
 }
+
+/* ======================
+   SCROLL FIX FOR GALLERY PAGE
+====================== */
+
+/* Target only page 4 (gallery page) */
+.page:nth-of-type(4) .card{
+    max-height: 80vh;        /* card height limit */
+    overflow-y: auto;        /* enable vertical scroll */
+    scrollbar-width: thin;  /* Firefox */
+}
+
+/* Smooth scrolling */
+.page:nth-of-type(4) .card{
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: style scrollbar (Chrome/Edge) */
+.page:nth-of-type(4) .card::-webkit-scrollbar{
+    width: 6px;
+}
+.page:nth-of-type(4) .card::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px;
+}
+
+/* ======================
+   HIDE SCROLLBAR (KEEP SCROLL)
+====================== */
+
+/* Chrome, Edge, Safari */
+.page:nth-of-type(4) .card::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+/* Firefox */
+.page:nth-of-type(4) .card{
+    scrollbar-width: none;
+}
+
+/* Internet Explorer / old Edge */
+.page:nth-of-type(4) .card{
+    -ms-overflow-style: none;
+}
